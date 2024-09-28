@@ -1,10 +1,52 @@
 <html>
     <head>
-        <title>Menampilkan Nama dan NIM</title>
+        <title>Studi Case 1</title>
+        <style>
+            body {background: linear-gradient(to left, aqua, blue, grey)}
+            .kotak{
+                width: 800px;
+                height: 50px;
+                background-color: antiquewhite;
+                border: 3px solid black;
+                border-radius: 20px;
+                display: flex;
+                position: relative;
+                top: 50;
+                left: 220;
+                justify-content: center;
+                align-items: center;
+                font-size: 26;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .container{
+                position: relative;
+                top: 300;
+                left: 550;
+            }
+        </style>
+        <script>
+            function tampilkanWaktu() {
+                var sekarang = new Date();
+                var tanggal = sekarang.toLocaleDateString();
+                var waktu = sekarang.toLocaleTimeString();
+                document.getElementById("tanggalWaktu").innerHTML = tanggal + ' ' + waktu;
+            }
+        setInterval(tampilkanWaktu, 1000);
+        </script>
     </head>
     <body>
-        <h1>Nama saya Daniel Lincoln Ginting</h1>
-        <h2>NIM saya 1202220201</h2>
-        <h3>Saya kelas SI4606</h3>
+        <div style ="text-align: center;">
+            <img src="fotosaya.png" style="max-width: 100%; height: 150; object-fit: cover; border-radius : 100%;" object alt="Deskripsi gambar">
+        </div>
+        <div class = "kotak">
+            Daniel Lincoln Ginting - 1202220201
+        </div>
+        <div class="container">
+            <a href="https://www.instagram.com/niellincoln_/">
+                <img src="logoinstagram.png" alt="link username ig" max-width = "auto" height="100">
+            </a>
+        </div>
+        <h2>Tanggal dan Waktu saat ini</h2>
+        <p id ="tanggalWaktu"></p>
     </body>
 </html>
